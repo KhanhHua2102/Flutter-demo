@@ -15,9 +15,9 @@ class LoginScreen extends StatelessWidget {
     } else {
       showDialog<String>(
           context: context,
-          builder: (BuildContext context) => AlertDialog(
-              title: const Text('Please try again!'),
-              content: const Text('email: admin | password: 123456')));
+          builder: (BuildContext context) => const AlertDialog(
+              title: Text('Please try again!'),
+              content: Text('email: admin | password: 123456')));
     }
   }
 
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
           child: TextField(
             controller: username,
             autofocus: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 icon: Icon(Icons.account_box_rounded),
                 focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.redAccent)),
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
             controller: password,
             obscureText: true,
             autofocus: true,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 icon: Icon(Icons.lock),
                 focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.redAccent)),
@@ -68,7 +68,8 @@ class LoginScreen extends StatelessWidget {
                 style: TextButton.styleFrom(primary: Colors.orange),
               ))),
       Container(
-          padding: const EdgeInsets.symmetric(horizontal: 100),
+        width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: ElevatedButton(
             onPressed: () => signInPressed(context),
             child: const Text("Sign In"),
