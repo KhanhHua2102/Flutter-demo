@@ -6,17 +6,8 @@ class NextScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Container(
-          margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
-          child: const Image(image: AssetImage("assets/logo_image.png"))),
-      Container(
-          margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
-          child: const Text("Welcome our talented Vilatify employers!",
-              style: TextStyle(fontSize: 30), textAlign: TextAlign.center))
-    ])));
+    return Center(
+      child: Text("hello"),
+    );
   }
 }
