@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_button/next_screen.dart';
 import 'package:login_button/forgot_password.dart';
+import 'package:login_button/todo_list_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   TextEditingController? username = TextEditingController();
@@ -11,7 +12,7 @@ class LoginScreen extends StatelessWidget {
   void signInPressed(context) {
     if (username?.text == "admin" && password?.text == "123456") {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const NextScreen()));
+          context, MaterialPageRoute(builder: (context) => const TodoListScreen()));
     } else {
       showDialog<String>(
           context: context,

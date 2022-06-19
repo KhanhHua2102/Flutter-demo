@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Store/todo_list.dart';
 
 class NextScreen extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
@@ -16,7 +17,7 @@ class NextScreen extends StatelessWidget {
       Container(
           margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
           child: const Text("Welcome our talented Vilatify employers!",
-              style: TextStyle(fontSize: 30), textAlign: TextAlign.center))
+              style: TextStyle(fontSize: 30), textAlign: TextAlign.center)),
     ])));
   }
 }
